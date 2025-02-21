@@ -1,0 +1,7 @@
+browseer -> server : HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server --> browseer: {"content":"你好","date":"2025-02-21T03:07:08.173Z"}
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note

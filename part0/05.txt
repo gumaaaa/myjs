@@ -1,0 +1,22 @@
+browseer -> server : HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server --> browseer: HTML-code
+browseer -> server : HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server --> browseer: main.css
+browseer -> server : https://studies.cs.helsinki.fi/exampleapp/spa.js
+server --> browseer: spa.js
+
+note over browseer:
+browseer starts executing js-code
+that requests JSON data from server
+end note
+
+browseer -> server : HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server --> browseer: [{
+        "content": "cn",
+        "date": "2025-02-21T02:29:06.844Z"
+    },...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
